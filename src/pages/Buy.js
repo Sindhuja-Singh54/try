@@ -4,7 +4,7 @@ import { AppBar } from '@mui/material';
 const Home = () => {
   return (
   <React.Fragment>
-      <h1>Login</h1>
+      <h1>Buy</h1>
   </React.Fragment>
   );
 };

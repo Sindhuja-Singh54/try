@@ -1,21 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router';
+import Home from './pages/Home';
+import ViewportProvider from './viewport';
+import Account from './pages/Account';
+import Buy from "./pages/Buy";
+import Sell from "./pages/Sell";
+import Signup from "./pages/SignUp";
+import Login from "./pages/LogIn"
 
 function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/login" component={LogIn} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/sell" component={Sell} />
-            <Route path="/buy" component={Buy} />
-            <Route path="/account" component={Account} />
-          </Switch>
-        </BrowserRouter>
-    </div>
-  );
+	return (
+		<ViewportProvider>
+			<Routes>
+				<Route exact path="/" element={<Home />} />
+				<Route exact path="/account" element={<Account />} />
+        <Route exact path="/buy" element={<Buy/>} />
+        <Route exact path="/sell" element={<Sell/>} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/login" element={<Login />} />
+			</Routes>
+		</ViewportProvider>
+	);
 }
 
 export default App;
