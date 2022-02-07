@@ -10,4 +10,4 @@ const useViewport = () => {
 };
 
 export default useViewport;
-export default ViewportProvider;
+// export default ViewportProvider;
