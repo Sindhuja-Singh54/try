@@ -5,5 +5,25 @@
     "mongoose": "^6.2.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "name": "xchangebazaar",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sindhuja-Singh54/try.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sindhuja-Singh54/try/issues"
+  },
+  "homepage": "https://github.com/Sindhuja-Singh54/try#readme",
+  "description": ""
 }
