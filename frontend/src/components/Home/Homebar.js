@@ -9,12 +9,13 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import HomeIcon from '@mui/icons-material/Home';
+import SellIcon from '@mui/icons-material/Sell';
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -119,24 +120,31 @@ export default function Homebar() {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem style={{ justifyContent: 'center' }}>
-				<Typography variant="h6" fontWeight="100" noWrap component="div">
-					Home
-				</Typography>
-			</MenuItem>
-			<MenuItem style={{ justifyContent: 'center' }}>
-				<Typography variant="h6" noWrap component="div" fontWeight="100">
-					Buy
-				</Typography>
-			</MenuItem>
 			{/* <MenuItem>
-				<IconButton size="large" aria-label="show 4 new mails" color="inherit">
-					<Badge badgeContent={4} color="error">
-						<MailIcon />
-					</Badge>
+				<IconButton
+					size="large"
+					aria-label="account of current home"
+					aria-controls="primary-search-account-menu"
+					aria-haspopup="true"
+					color="inherit"
+				>
+					<HomeIcon />
 				</IconButton>
-				<p>Messages</p>
+				<p>Home</p>
 			</MenuItem> */}
+			<MenuItem>
+				<IconButton
+					size="large"
+					aria-label="account of current sell"
+					aria-controls="primary-search-account-menu"
+					aria-haspopup="true"
+					color="inherit"
+				>
+					<SellIcon />
+				</IconButton>
+				<p>Sell</p>
+			</MenuItem>
+
 			<MenuItem>
 				<IconButton size="large" aria-label="show 17 new notifications" color="inherit">
 					<Badge badgeContent={17} color="error">
@@ -162,17 +170,22 @@ export default function Homebar() {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="static"
-			 style={{ backgroundColor: '#123045' }}
-			 >
+			<AppBar position="static" style={{ backgroundColor: '#123045' }}>
 				<Toolbar>
-					<img
-						style={{ width: '60px', transform: 'scaleX(-1)' }}
-						src="https://upload.wikimedia.org/wikipedia/commons/d/df/Shopping_cart_icon.svg"
-						alt="icon"
-					/>
-
-					<Typography variant="h6" fontWeight=" bolder" noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }}>
+					<Link to="/">
+						<img
+							style={{ width: '60px', transform: 'scaleX(-1)' }}
+							src="https://upload.wikimedia.org/wikipedia/commons/d/df/Shopping_cart_icon.svg"
+							alt="icon"
+						/>
+					</Link>{' '}
+					<Typography
+						variant="h6"
+						fontWeight=" bolder"
+						noWrap
+						component="div"
+						sx={{ display: { xs: 'none', sm: 'block' } }}
+					>
 						Xchange Bazaar
 					</Typography>
 					<Search>
@@ -181,25 +194,14 @@ export default function Homebar() {
 						</SearchIconWrapper>
 						<StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} />
 					</Search>
-
 					<Box sx={{ flexGrow: 1 }} />
 					<Typography
 						variant="h6"
+						fontWeight=" bold"
 						noWrap
 						component="div"
 						style={{ margin: '0 2% 0 0' }}
-						fontWeight="100"
 						sx={{ display: { xs: 'none', md: 'flex' } }}
-					>
-						Home
-					</Typography>
-					<Typography
-						variant="h6"
-						noWrap
-						component="div"
-						fontWeight="100"
-						style={{ margin: '0 2% 0 0' }}
-						sx={{ display: { xs: 'none', md: 'flex' }}}
 					>
 						Sell
 					</Typography>

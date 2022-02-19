@@ -7,7 +7,6 @@ import { HomeMainWrapper } from '../styled/Background';
 const Home = () => {
 	return (
 		<React.Fragment>
-			<Homebar />
 			{/* <HomeBuyCard/> */}
 			<HomeMainWrapper>
 				<BuyHomeBox />

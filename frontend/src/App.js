@@ -7,10 +7,12 @@ import Buy from './pages/Buy';
 import Sell from './pages/Sell';
 import Signup from './pages/SignUp';
 import Login from './pages/LogIn';
+import Homebar from './components/Home/Homebar';
 
 function App() {
 	return (
 		<ViewportProvider>
+			<Homebar/>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/account" element={<Account />} />
