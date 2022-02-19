@@ -13,7 +13,7 @@ const BuyHomeBox = () => {
 		<React.Fragment>
 			<Card1>
 				{BuyHomeBoxJson.map((item, index) => (
-					<Card style={{ width: isMobile ? '100%' : '30%', margin: '1%', height: '350px' }}>
+					<Card style={{ width: isMobile ? '100%' : '30%', margin: '1%', height: '365px' }}>
 						<Head>
 							<HText>{item.user}</HText>
 
